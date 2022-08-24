@@ -83,14 +83,13 @@ d3.json(earthquake).then(function(data) {
   
 // This function determines the radius of the earthquake marker based on its magnitude.
 // Earthquakes with a magnitude of 0 will be plotted with a radius of 1.
-    function getRadius(magnitude) {
-        if (magnitude === 0) {
-        return 1;
-        }
-        return magnitude * 4;
+function getRadius(magnitude) {
+    if (magnitude === 0) {
+    return 1;
     }
+    return magnitude * 4;
 }
-
+}
 // Creating a GeoJSON layer with the retrieved data.
   L.geoJSON(data, {
 
